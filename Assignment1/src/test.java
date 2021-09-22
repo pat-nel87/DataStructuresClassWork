@@ -13,13 +13,7 @@ public class test {
         bag2.add("d");
         bag2.add("e");
 
-        //bag2.printContents();
-
-        BagInterface<String> everything = bag1.union(bag2);
-      //  System.out.println(everything.contains("b"));
-
         ResizableArrayBag<String> everything2 = bag1.union(bag2);
-      //  System.out.println(everything2.getFrequencyOf("b"));
         everything2.printContents();
     }
 }

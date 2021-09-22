@@ -47,7 +47,7 @@ public interface BagInterface<T>
                 Note: If the bag is empty, the returned array is empty. */
 	public T[] toArray();
 
-	public <T extends BagInterface> T union(T bagObject);
+	public BagInterface<T> union(BagInterface<T> bagObject);
 	/** combines current bag with bag passed to create new bag.
 		@param bagObject The Bag you'd like to unify with.
 		@return A new bag that is the combined elements of current bag and bag passed */

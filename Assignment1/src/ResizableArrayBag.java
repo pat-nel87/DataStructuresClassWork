@@ -77,8 +77,11 @@ public final class ResizableArrayBag<T> implements BagInterface<T>
       return result;
 	} // end toArray
 
+	/** combines current bag with bag passed to create new bag.
+	 @param bagObject The Bag you'd like to unify with.
+	 @return brandNewBag, A new bag that is the combined elements of current bag and bag passed */
 	@Override
-	public <T extends BagInterface> T union(T bagObject) {
+	public ResizableArrayBag<T> union(BagInterface<T> bagObject) {
 		ResizableArrayBag bagObjectTemp = (ResizableArrayBag) bagObject;
 		int newCollectionSize = this.getCurrentSize() + bagObject.getCurrentSize();
 		ResizableArrayBag brandNewBag = new ResizableArrayBag(newCollectionSize);
@@ -89,9 +92,9 @@ public final class ResizableArrayBag<T> implements BagInterface<T>
 		for(int j = 0; j < bagObject.getCurrentSize(); j++) {
 			brandNewBag.add(bagObjectTemp.bag[j]);
 		}
-		return (T) brandNewBag;
+		return brandNewBag;
 	}
-
+	// a test method to ascertain the contents of the bag by printing out to console
 	public void printContents() {
 		for(int i = 0; i < this.getCurrentSize(); i++) {
 			System.out.println((bag[i]));
