@@ -87,7 +87,6 @@ public final class ResizableArrayBag<T> implements BagInterface<T>
 		ResizableArrayBag brandNewBag = new ResizableArrayBag(newCollectionSize);
 		for(int i = 0; i < this.getCurrentSize(); i++) {
 			brandNewBag.add(bag[i]);
-
 		}
 		for(int j = 0; j < bagObject.getCurrentSize(); j++) {
 			brandNewBag.add(bagObjectTemp.bag[j]);
@@ -100,7 +99,6 @@ public final class ResizableArrayBag<T> implements BagInterface<T>
 			System.out.println((bag[i]));
 		}
 	}
-
 
 	/** Sees whether this bag is empty.
        @return  True if this bag is empty, or false if not. */
